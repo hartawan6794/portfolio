@@ -70,6 +70,50 @@
       .mobile-nav-link:hover::after {
         width: 100%;
       }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Animasi Timeline */
+      .education-item {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+
+      .education-item.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Tambahan Pulse */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .timeline-dot {
+        transition: all 0.3s ease;
+      }
+
+      .timeline-dot:hover {
+        animation: pulse 1s infinite;
+      }
     </style>
   </head>
   <body class="bg-gradient-to-br from-gray-900 to-blue-900 text-white">
@@ -102,7 +146,16 @@
             href="#about"
             class="hover:text-blue-300 transition-colors active:scale-95 group relative"
           >
-            About
+            Tenyang
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#education"
+            class="hover:text-blue-300 transition-colors active:scale-95 group relative"
+          >
+            Education
             <span
               class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"
             ></span>
@@ -111,7 +164,7 @@
             href="#skills"
             class="hover:text-blue-300 transition-colors active:scale-95 group relative"
           >
-            Skills
+            Kemampuan
             <span
               class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"
             ></span>
@@ -120,7 +173,7 @@
             href="#projects"
             class="hover:text-blue-300 transition-colors active:scale-95 group relative"
           >
-            Projects
+            Projek
             <span
               class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"
             ></span>
@@ -129,7 +182,7 @@
             href="#contact"
             class="hover:text-blue-300 transition-colors active:scale-95 group relative"
           >
-            Contact
+            Kontek
             <span
               class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"
             ></span>
@@ -193,7 +246,16 @@
               href="#about"
               class="text-3xl text-white/70 hover:text-white transition-all duration-300 ease-out relative group"
             >
-              About
+              Tentang
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <a
+              href="#education"
+              class="text-3xl text-white/70 hover:text-white transition-all duration-300 ease-out relative group"
+            >
+              Pendidikan
               <span
                 class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"
               ></span>
@@ -202,7 +264,7 @@
               href="#skills"
               class="text-3xl text-white/70 hover:text-white transition-all duration-300 ease-out relative group"
             >
-              Skills
+              Kemampuan
               <span
                 class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"
               ></span>
@@ -211,7 +273,7 @@
               href="#projects"
               class="text-3xl text-white/70 hover:text-white transition-all duration-300 ease-out relative group"
             >
-              Projects
+              Projek
               <span
                 class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"
               ></span>
@@ -220,7 +282,7 @@
               href="#contact"
               class="text-3xl text-white/70 hover:text-white transition-all duration-300 ease-out relative group"
             >
-              Contact
+              Kontak
               <span
                 class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"
               ></span>
@@ -315,6 +377,123 @@
       </div>
     </section>
 
+    <!-- Modifikasi Section Education -->
+    <section id="education" class="py-16 bg-gray-900/50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12 text-blue-300">
+          Pendidikan
+        </h2>
+
+        <div class="relative">
+          <!-- Timeline Vertikal -->
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-600 h-full origin-top"
+          ></div>
+
+          <!-- SD -->
+          <div
+            class="mb-8 flex items-center justify-between w-full education-item"
+          >
+            <div class="order-1 w-5/12"></div>
+
+            <div
+              class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full border-4 border-blue-600 timeline-dot"
+            >
+              <h1 class="mx-auto text-white text-lg"></h1>
+            </div>
+
+            <div
+              class="order-1 bg-gray-900 rounded-lg shadow-xl w-5/12 px-6 py-4"
+            >
+              <h3 class="mb-3 font-bold text-blue-300 text-xl">
+                Sekolah Dasar (SD)
+              </h3>
+              <p class="text-sm text-gray-400">SDN [Nama Sekolah] [Kota]</p>
+              <span class="text-sm text-gray-500"> Tahun Lulus: [Tahun] </span>
+            </div>
+          </div>
+
+          <!-- SMP -->
+          <div
+            class="mb-8 flex items-center justify-between w-full flex-row-reverse education-item"
+          >
+            <div class="order-1 w-5/12"></div>
+
+            <div
+              class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full border-4 border-blue-600 timeline-dot"
+            >
+              <h1 class="mx-auto text-white text-lg"></h1>
+            </div>
+
+            <div
+              class="order-1 bg-gray-900 rounded-lg shadow-xl w-5/12 px-6 py-4 text-right"
+            >
+              <h3 class="mb-3 font-bold text-blue-300 text-xl">
+                Sekolah Menengah Pertama (SMP)
+              </h3>
+              <p class="text-sm text-gray-400">SMPN [Nama Sekolah] [Kota]</p>
+              <span class="text-sm text-gray-500"> Tahun Lulus: [Tahun] </span>
+            </div>
+          </div>
+
+          <!-- SMA -->
+          <div
+            class="mb-8 flex items-center justify-between w-full education-item"
+          >
+            <div class="order-1 w-5/12"></div>
+
+            <div
+              class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full border-4 border-blue-600 timeline-dot"
+            >
+              <h1 class="mx-auto text-white text-lg"></h1>
+            </div>
+
+            <div
+              class="order-1 bg-gray-900 rounded-lg shadow-xl w-5/12 px-6 py-4"
+            >
+              <h3 class="mb-3 font-bold text-blue-300 text-xl">
+                Sekolah Menengah Atas (SMA)
+              </h3>
+              <p class="text-sm text-gray-400">SMAN [Nama Sekolah] [Kota]</p>
+              <span class="block text-sm text-gray-500">
+                Jurusan: [IPA/IPS]
+              </span>
+              <span class="block text-sm text-gray-500 mt-1">
+                Tahun Lulus: [Tahun]
+              </span>
+            </div>
+          </div>
+
+          <!-- Universitas -->
+          <div
+            class="mb-8 flex items-center justify-between w-full flex-row-reverse education-item"
+          >
+            <div class="order-1 w-5/12"></div>
+
+            <div
+              class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full border-4 border-blue-600 timeline-dot"
+            >
+              <h1 class="mx-auto text-white text-lg"></h1>
+            </div>
+
+            <div
+              class="order-1 bg-gray-900 rounded-lg shadow-xl w-5/12 px-6 py-4 text-right"
+            >
+              <h3 class="mb-3 font-bold text-blue-300 text-xl">
+                Perguruan Tinggi
+              </h3>
+              <p class="text-sm text-gray-400">[Nama Universitas]</p>
+              <span class="block text-sm text-gray-500">
+                Jurusan: [Nama Jurusan]
+              </span>
+              <span class="block text-sm text-gray-500 mt-1">
+                IPK: [Nilai] | Tahun Lulus: [Tahun]
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-4">
       <div class="container mx-auto">
@@ -671,6 +850,35 @@
       mobileNavLinks.forEach((link) => {
         link.addEventListener("click", toggleMobileMenu);
       });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      // Fungsi Observasi Animasi
+      function animateEducationItems() {
+        const educationItems = document.querySelectorAll(".education-item");
+
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        // Observasi setiap item
+        educationItems.forEach((item) => {
+          observer.observe(item);
+        });
+      }
+
+      // Panggil fungsi animasi
+      animateEducationItems();
     });
   </script>
 </html>
