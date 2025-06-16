@@ -114,6 +114,15 @@
       .timeline-dot:hover {
         animation: pulse 1s infinite;
       }
+
+      /* Secara opsional, Anda bisa mengatur drag and drop pada gambar agar tidak terlalu besar */
+   
+
+      #lightbox-image {
+        max-width: 90%; /* Maksimal lebar gambar */
+        max-height: 90%; /* Maksimal tinggi gambar */
+        object-fit: cover; /* Jaga proporsi gambar */
+      }
     </style>
   </head>
   <body class="bg-gradient-to-br from-gray-900 to-blue-900 text-white">
@@ -125,9 +134,8 @@
         class="container mx-auto px-4 py-4 flex justify-between items-center"
       >
         <div class="text-2xl font-bold tracking-wider">
-          <span class="text-blue-300">[ </span>Nama Anda<span
-            class="text-blue-300"
-            >]</span
+          <span class="text-blue-300">[ </span>SMR<span class="text-blue-300">
+            ]</span
           >
         </div>
 
@@ -146,7 +154,7 @@
             href="#about"
             class="hover:text-blue-300 transition-colors active:scale-95 group relative"
           >
-            Tentang
+            About
             <span
               class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"
             ></span>
@@ -164,7 +172,7 @@
             href="#skills"
             class="hover:text-blue-300 transition-colors active:scale-95 group relative"
           >
-            Kemampuan
+            Skill
             <span
               class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"
             ></span>
@@ -173,7 +181,7 @@
             href="#projects"
             class="hover:text-blue-300 transition-colors active:scale-95 group relative"
           >
-            Projek
+            Project
             <span
               class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"
             ></span>
@@ -182,7 +190,7 @@
             href="#contact"
             class="hover:text-blue-300 transition-colors active:scale-95 group relative"
           >
-            Kontek
+            Contact
             <span
               class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"
             ></span>
@@ -218,7 +226,7 @@
           <!-- Header -->
           <div class="flex justify-between items-center mb-16">
             <div class="text-2xl font-bold text-white">
-              <span class="text-blue-300">[ </span>Nama Anda<span
+              <span class="text-blue-300">[ </span>SMR<span
                 class="text-blue-300"
                 >]</span
               >
@@ -246,7 +254,7 @@
               href="#about"
               class="text-3xl text-white/70 hover:text-white transition-all duration-300 ease-out relative group"
             >
-              Tentang
+              About
               <span
                 class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"
               ></span>
@@ -255,7 +263,7 @@
               href="#education"
               class="text-3xl text-white/70 hover:text-white transition-all duration-300 ease-out relative group"
             >
-              Pendidikan
+              Education
               <span
                 class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"
               ></span>
@@ -264,7 +272,7 @@
               href="#skills"
               class="text-3xl text-white/70 hover:text-white transition-all duration-300 ease-out relative group"
             >
-              Kemampuan
+              Skill
               <span
                 class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"
               ></span>
@@ -273,7 +281,7 @@
               href="#projects"
               class="text-3xl text-white/70 hover:text-white transition-all duration-300 ease-out relative group"
             >
-              Projek
+              Project
               <span
                 class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"
               ></span>
@@ -282,7 +290,7 @@
               href="#contact"
               class="text-3xl text-white/70 hover:text-white transition-all duration-300 ease-out relative group"
             >
-              Kontak
+              Contact
               <span
                 class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"
               ></span>
@@ -330,10 +338,10 @@
         <h1
           class="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
         >
-          Nama Lengkap Anda
+          Juli Hartawan
         </h1>
         <p class="text-xl text-gray-300 mb-8">
-          Creative Developer | UI/UX Designer | Tech Enthusiast
+          Web Developer | Android Developer
         </p>
         <div class="flex justify-center space-x-6">
           <a href="#" class="text-3xl hover:text-blue-400 transition-colors">
@@ -343,7 +351,7 @@
             <i class="fab fa-linkedin"></i>
           </a>
           <a href="#" class="text-3xl hover:text-blue-400 transition-colors">
-            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
           </a>
         </div>
       </div>
@@ -358,10 +366,10 @@
         <div class="glassmorphism p-8">
           <h2 class="text-3xl font-bold mb-6 text-blue-300">About Me</h2>
           <p class="text-gray-300 leading-relaxed">
-            Seorang pengembang kreatif dengan passion dalam menciptakan solusi
-            digital inovatif. Saya mengombinasikan desain estetis dengan
-            fungsionalitas teknis untuk menghasilkan pengalaman pengguna yang
-            luar biasa.
+            Seorang pengembang web dan android dengan pengalaman 5 tahun+ di
+            dunai IT. Sebagai pengembang software saya suka melakukan hal-hal
+            baru dan berpikir kritis dan inovatif untuk menghasilkan pengalaman
+            pengguna yang luar biasa.
           </p>
         </div>
         <div class="grid grid-cols-2 gap-6">
@@ -408,8 +416,8 @@
               <h3 class="mb-3 font-bold text-blue-300 text-xl">
                 Sekolah Dasar (SD)
               </h3>
-              <p class="text-sm text-gray-400">SDN [Nama Sekolah] [Kota]</p>
-              <span class="text-sm text-gray-500"> Tahun Lulus: [Tahun] </span>
+              <p class="text-sm text-gray-400">SDN 1 Taman Asri</p>
+              <span class="text-sm text-gray-500"> Tahun Lulus: 2006 </span>
             </div>
           </div>
 
@@ -431,8 +439,8 @@
               <h3 class="mb-3 font-bold text-blue-300 text-xl">
                 Sekolah Menengah Pertama (SMP)
               </h3>
-              <p class="text-sm text-gray-400">SMPN [Nama Sekolah] [Kota]</p>
-              <span class="text-sm text-gray-500"> Tahun Lulus: [Tahun] </span>
+              <p class="text-sm text-gray-400">MTS 1 Baradatu</p>
+              <span class="text-sm text-gray-500"> Tahun Lulus: 2009 </span>
             </div>
           </div>
 
@@ -454,12 +462,10 @@
               <h3 class="mb-3 font-bold text-blue-300 text-xl">
                 Sekolah Menengah Atas (SMA)
               </h3>
-              <p class="text-sm text-gray-400">SMAN [Nama Sekolah] [Kota]</p>
-              <span class="block text-sm text-gray-500">
-                Jurusan: [IPA/IPS]
-              </span>
+              <p class="text-sm text-gray-400">MA 1 Baradatu</p>
+              <span class="block text-sm text-gray-500"> Jurusan: IPS </span>
               <span class="block text-sm text-gray-500 mt-1">
-                Tahun Lulus: [Tahun]
+                Tahun Lulus: 2012
               </span>
             </div>
           </div>
@@ -482,12 +488,14 @@
               <h3 class="mb-3 font-bold text-blue-300 text-xl">
                 Perguruan Tinggi
               </h3>
-              <p class="text-sm text-gray-400">[Nama Universitas]</p>
+              <p class="text-sm text-gray-400">
+                Universitas Teknokrat Indonesia
+              </p>
               <span class="block text-sm text-gray-500">
-                Jurusan: [Nama Jurusan]
+                Jurusan: Informatika
               </span>
               <span class="block text-sm text-gray-500 mt-1">
-                IPK: [Nilai] | Tahun Lulus: [Tahun]
+                Tahun Lulus: 2019
               </span>
             </div>
           </div>
@@ -502,34 +510,54 @@
         </h2>
         <div class="grid md:grid-cols-3 gap-8">
           <div class="glassmorphism p-6 text-center animate-float glow">
-            <i class="fab fa-react text-6xl text-blue-400 mb-4"></i>
-            <h3 class="text-xl font-semibold mb-2">React JS</h3>
-            <div class="w-full bg-blue-900 rounded-full h-2.5">
+            <i class="fab fa-php text-6xl text-blue-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">PHP</h3>
+            <!-- <div class="w-full bg-blue-900 rounded-full h-2.5">
               <div
                 class="bg-blue-600 h-2.5 rounded-full"
                 style="width: 85%"
               ></div>
-            </div>
+            </div> -->
           </div>
           <div class="glassmorphism p-6 text-center animate-float glow">
-            <i class="fab fa-node text-6xl text-green-400 mb-4"></i>
-            <h3 class="text-xl font-semibold mb-2">Node JS</h3>
-            <div class="w-full bg-blue-900 rounded-full h-2.5">
+            <i class="fab fa-java text-6xl text-green-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Java</h3>
+            <!-- <div class="w-full bg-blue-900 rounded-full h-2.5">
               <div
                 class="bg-green-600 h-2.5 rounded-full"
                 style="width: 75%"
               ></div>
-            </div>
+            </div> -->
           </div>
           <div class="glassmorphism p-6 text-center animate-float glow">
-            <i class="fab fa-python text-6xl text-yellow-400 mb-4"></i>
-            <h3 class="text-xl font-semibold mb-2">Python</h3>
-            <div class="w-full bg-blue-900 rounded-full h-2.5">
+            <i class="fab fa-laravel text-6xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Laravel</h3>
+            <!-- <div class="w-full bg-blue-900 rounded-full h-2.5">
               <div
                 class="bg-yellow-600 h-2.5 rounded-full"
                 style="width: 70%"
               ></div>
-            </div>
+            </div> -->
+          </div>
+          <div class="glassmorphism p-6 text-center animate-float glow">
+            <i class="fab fa-linux text-6xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Linux</h3>
+            <!-- <div class="w-full bg-blue-900 rounded-full h-2.5">
+              <div
+                class="bg-yellow-600 h-2.5 rounded-full"
+                style="width: 70%"
+              ></div>
+            </div> -->
+          </div>
+          <div class="glassmorphism p-6 text-center animate-float glow">
+            <i class="fab fa-js text-6xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Javascript</h3>
+            <!-- <div class="w-full bg-blue-900 rounded-full h-2.5">
+              <div
+                class="bg-yellow-600 h-2.5 rounded-full"
+                style="width: 70%"
+              ></div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -547,7 +575,7 @@
           <div class="glassmorphism overflow-hidden group animate-float">
             <div class="relative">
               <img
-                src="project1.jpg"
+                src="dashboard_presensi.png"
                 alt="Project 1"
                 class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
               />
@@ -556,7 +584,7 @@
               >
                 <div class="text-center">
                   <h3 class="text-white text-xl font-semibold mb-2">
-                    E-Commerce Platform
+                    E-presensi
                   </h3>
                   <div class="flex justify-center space-x-4">
                     <a
@@ -565,42 +593,44 @@
                     >
                       <i class="fab fa-github mr-2"></i>Code
                     </a>
-                    <a
-                      href="#"
-                      class="bg-green-600 px-4 py-2 rounded-full text-white hover:bg-green-700"
+                    <button
+                      class="bg-green-600 px-4 py-2 rounded-full text-white hover:bg-green-700 demo-button"
+                      data-images='["dashboard_presensi.png", "dashboard_presensi1.png", "dashboard_presens2.png"]'
                     >
                       <i class="fas fa-eye mr-2"></i>Demo
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
             <div class="p-6">
               <div class="flex justify-between items-center mb-4">
-                <h3 class="text-xl font-semibold text-blue-300">
-                  E-Commerce Website
-                </h3>
+                <h3 class="text-xl font-semibold text-blue-300">E-presensi</h3>
                 <span
                   class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-sm"
                   >Full Stack</span
                 >
               </div>
               <p class="text-gray-400 mb-4">
-                Platform e-commerce modern dengan fitur pembayaran terintegrasi
-                dan manajemen inventori.
+                E-presensi merupakan website absen harian pegawai, digunakan
+                untuk melakukan input pekerjaan harian dan cetak laporan
               </p>
               <div class="flex flex-wrap gap-2">
                 <span
                   class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs"
-                  >React</span
+                  >php</span
                 >
                 <span
                   class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs"
-                  >Node.js</span
+                  >Laravel</span
                 >
                 <span
                   class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs"
-                  >MongoDB</span
+                  >MariaDB</span
+                >
+                <span
+                  class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs"
+                  >Filament</span
                 >
               </div>
             </div>
@@ -778,6 +808,39 @@
     <footer class="py-6 text-center text-gray-400">
       <p>&copy; 2025 &hearts;&hearts;. All Rights Reserved.</p>
     </footer>
+    <!-- Lightbox Structure -->
+    <!-- Lightbox Structure -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-50"
+    >
+      <div class="relative">
+        <button
+          id="close-lightbox"
+          class="absolute top-4 right-4 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700"
+        >
+          &times;
+        </button>
+        <button
+          id="prev-button"
+          class="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700"
+        >
+          &lt;
+        </button>
+        <button
+          id="next-button"
+          class="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700"
+        >
+          &gt;
+        </button>
+        <img
+          id="lightbox-image"
+          class="max-w-full max-h-full"
+          src=""
+          alt="Project Images"
+        />
+      </div>
+    </div>
   </body>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -879,6 +942,48 @@
 
       // Panggil fungsi animasi
       animateEducationItems();
+    });
+
+    let currentImageIndex = 0;
+    let imagesArray = [];
+    
+    document.querySelectorAll('.demo-button').forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+    
+            imagesArray = JSON.parse(button.getAttribute('data-images'));
+            currentImageIndex = 0; // Reset index gambar
+    
+            // Tampilkan gambar pertama di lightbox
+            document.getElementById('lightbox-image').src = imagesArray[currentImageIndex];
+            document.getElementById('lightbox').classList.remove('hidden'); // Tampilkan lightbox
+        });
+    });
+    
+    // Tutup lightbox
+    document.getElementById('close-lightbox').addEventListener('click', () => {
+        document.getElementById('lightbox').classList.add('hidden');
+    });
+    
+    // Navigasi Previous
+    document.getElementById('prev-button').addEventListener('click', (event) => {
+        event.stopPropagation(); // Cegah aksi click dari bubble
+        currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : imagesArray.length - 1;
+        document.getElementById('lightbox-image').src = imagesArray[currentImageIndex];
+    });
+    
+    // Navigasi Next
+    document.getElementById('next-button').addEventListener('click', (event) => {
+        event.stopPropagation(); // Cegah aksi click dari bubble
+        currentImageIndex = (currentImageIndex < imagesArray.length - 1) ? currentImageIndex + 1 : 0;
+        document.getElementById('lightbox-image').src = imagesArray[currentImageIndex];
+    });
+    
+    // Menutup lightbox ketika mengklik luar gambar
+    document.getElementById('lightbox').addEventListener('click', function (e) {
+        if (e.target.id === 'lightbox' || e.target.id === 'close-lightbox') {
+            this.classList.add('hidden');
+        }
     });
   </script>
 </html>
