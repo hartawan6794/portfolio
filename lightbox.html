@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Lightbox Example</title>
+
+    <style>
+        #lightbox {
+            align-items: center; /* Menyeret gambar ke tengah vertikal */
+            justify-content: center; /* Menyeret gambar ke tengah horizontal */
+          }
+        #lightbox-image {
+            max-width: 90%; /* Maksimal lebar gambar */
+            max-height: 90%; /* Maksimal tinggi gambar */
+            object-fit: cover; /* Jaga proporsi gambar */
+          }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+<section id="projects" class="py-20 px-4 bg-gray-900/50">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12 text-blue-300">Selected Projects</h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="glassmorphism overflow-hidden group animate-float">
+                <div class="relative">
+                    <img src="dashboard_presensi.png" alt="Project 1" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center">
+                            <h3 class="text-white text-xl font-semibold mb-2">E-presensi</h3>
+                            <div class="flex justify-center space-x-4">
+                                <a href="#" class="bg-blue-600 px-4 py-2 rounded-full text-white hover:bg-blue-700">
+                                    <i class="fab fa-github mr-2"></i>Code
+                                </a>
+                                <button class="bg-green-600 px-4 py-2 rounded-full text-white hover:bg-green-700 demo-button" data-images='["dashboard_presensi.png", "dashboard_presensi1.png", "image3.jpg"]'>
+                                    <i class="fas fa-eye mr-2"></i>Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold text-blue-300">E-presensi</h3>
+                        <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-sm">Full Stack</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">E-presensi merupakan website absen harian pegawai.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox Structure -->
+        <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+            <div class="relative">
+                <button id="close-lightbox" class="absolute top-4 right-4 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700">&times;</button>
+                <button id="prev-button" class="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700">&lt;</button>
+                <button id="next-button" class="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700">&gt;</button>
+                <img id="lightbox-image" class="max-w-full max-h-full" src="" alt="Project Images" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+let currentImageIndex = 0;
+let imagesArray = [];
+
+document.querySelectorAll('.demo-button').forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        imagesArray = JSON.parse(button.getAttribute('data-images'));
+        currentImageIndex = 0; // Reset index gambar
+
+        // Tampilkan gambar pertama di lightbox
+        document.getElementById('lightbox-image').src = imagesArray[currentImageIndex];
+        document.getElementById('lightbox').classList.remove('hidden'); // Tampilkan lightbox
+    });
+});
+
+// Tutup lightbox
+document.getElementById('close-lightbox').addEventListener('click', () => {
+    document.getElementById('lightbox').classList.add('hidden');
+});
+
+// Navigasi Previous
+document.getElementById('prev-button').addEventListener('click', (event) => {
+    event.stopPropagation(); // Cegah aksi click dari bubble
+    currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : imagesArray.length - 1;
+    document.getElementById('lightbox-image').src = imagesArray[currentImageIndex];
+});
+
+// Navigasi Next
+document.getElementById('next-button').addEventListener('click', (event) => {
+    event.stopPropagation(); // Cegah aksi click dari bubble
+    currentImageIndex = (currentImageIndex < imagesArray.length - 1) ? currentImageIndex + 1 : 0;
+    document.getElementById('lightbox-image').src = imagesArray[currentImageIndex];
+});
+
+// Menutup lightbox ketika mengklik luar gambar
+document.getElementById('lightbox').addEventListener('click', function (e) {
+    if (e.target.id === 'lightbox' || e.target.id === 'close-lightbox') {
+        this.classList.add('hidden');
+    }
+});
+</script>
+
+</body>
+</html>
