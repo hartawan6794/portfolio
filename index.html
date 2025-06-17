@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Modern</title>
+  <title>Juli Hartawan - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
   <style>
@@ -119,6 +119,12 @@
     .timeline-dot:hover {
       animation: pulse 1s infinite;
     }
+
+     #lightbox-image {
+      max-width: 100%;
+      max-height: 100vh; /* Atur tinggi maksimum sesuai viewport */
+      object-fit: contain; /* Pertahankan proporsi asli gambar */
+  }
   </style>
 </head>
 
@@ -250,7 +256,7 @@
   <section id="home" class="min-h-screen flex items-center justify-center px-4">
     <div class="text-center">
       <div class="mb-8 animate-pulse">
-        <img src="profile.jpg" alt="Profile"
+        <img src="logo1.png" alt="Profile"
           class="w-48 h-48 rounded-full mx-auto border-4 border-blue-500 object-cover" />
       </div>
       <h1 class="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
@@ -287,7 +293,7 @@
       </div>
       <div class="grid grid-cols-2 gap-6">
         <div class="bg-blue-900/50 p-6 rounded-xl text-center animate-float">
-          <h3 class="text-4xl font-bold text-blue-400">3+</h3>
+          <h3 class="text-4xl font-bold text-blue-400">5+</h3>
           <p class="text-gray-300">Tahun Pengalaman</p>
         </div>
         <div class="bg-blue-900/50 p-6 rounded-xl text-center animate-float">
@@ -507,38 +513,37 @@
         <!-- Project 2 -->
         <div class="glassmorphism overflow-hidden group animate-float">
           <div class="relative">
-            <img src="project2.jpg" alt="Project 2"
+            <img src="SIREPO/landing-page.png" alt="Project 2"
               class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" />
             <div
               class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
               <div class="text-center">
                 <h3 class="text-white text-xl font-semibold mb-2">
-                  AI Chatbot
+                  SIREPO
                 </h3>
                 <div class="flex justify-center space-x-4">
                   <a href="#" class="bg-blue-600 px-4 py-2 rounded-full text-white hover:bg-blue-700">
                     <i class="fab fa-github mr-2"></i>Code
                   </a>
-                  <a href="#" class="bg-green-600 px-4 py-2 rounded-full text-white hover:bg-green-700">
+                   <button class="bg-green-600 px-4 py-2 rounded-full text-white hover:bg-green-700 demo-button"
+                    data-images='["SIREPO/login.png", "SIREPO/verif.png", "SIREPO/dashboard.png"]'>
                     <i class="fas fa-eye mr-2"></i>Demo
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
           <div class="p-6">
             <div class="flex justify-between items-center mb-4">
-              <h3 class="text-xl font-semibold text-blue-300">AI Chatbot</h3>
-              <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-sm">Machine Learning</span>
+              <h3 class="text-xl font-semibold text-blue-300">SIREPO</h3>
+              <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-sm">Web App</span>
             </div>
             <p class="text-gray-400 mb-4">
-              Chatbot cerdas dengan kemampuan pemrosesan bahasa alami dan
-              pembelajaran mesin.
+              SIREPO merupakan website diskominfo pemerintah kabupaten tanggamus untuk mangemen repository aplikasi yang ada di kominfo kab tanggamus.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs">Python</span>
-              <span class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs">TensorFlow</span>
-              <span class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs">Flask</span>
+              <span class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs">php</span>
+              <span class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs">CodeIgneter 4</span>
             </div>
           </div>
         </div>
@@ -546,21 +551,22 @@
         <!-- Project 3 -->
         <div class="glassmorphism overflow-hidden group animate-float">
           <div class="relative">
-            <img src="project3.jpg" alt="Project 3"
+            <img src="KAMUS_LAMPUNG/dashoard.jpg" alt="Project 3"
               class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" />
             <div
               class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
               <div class="text-center">
                 <h3 class="text-white text-xl font-semibold mb-2">
-                  Manajemen Proyek
+                  KAMUS LAMPUNG
                 </h3>
                 <div class="flex justify-center space-x-4">
-                  <a href="#" class="bg-blue-600 px-4 py-2 rounded-full text-white hover:bg-blue-700">
+                  <!-- <a href="#" class="bg-blue-600 px-4 py-2 rounded-full text-white hover:bg-blue-700">
                     <i class="fab fa-github mr-2"></i>Code
-                  </a>
-                  <a href="#" class="bg-green-600 px-4 py-2 rounded-full text-white hover:bg-green-700">
+                  </a> -->
+                  <button class="bg-green-600 px-4 py-2 rounded-full text-white hover:bg-green-700 demo-button"
+                    data-images='["KAMUS_LAMPUNG/kosakata.jpg", "KAMUS_LAMPUNG/translate.jpg", "KAMUS_LAMPUNG/list_kosakata.jpg"]'>
                     <i class="fas fa-eye mr-2"></i>Demo
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -568,18 +574,17 @@
           <div class="p-6">
             <div class="flex justify-between items-center mb-4">
               <h3 class="text-xl font-semibold text-blue-300">
-                Manajemen Proyek
+                Kamus Lampung
               </h3>
-              <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-sm">Web App</span>
+              <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-sm">Android App</span>
             </div>
             <p class="text-gray-400 mb-4">
-              Aplikasi manajemen proyek kolaboratif dengan fitur pelacakan
-              tugas dan komunikasi tim.
+              Kamus Lampung merupakan aplikasi untuk mempermudah pengguna mencari arti kata bahasa lampung. Dengan algoritma binary search maka akan mempercepat pengguna mendapatkan kata yang diingkan.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs">React</span>
-              <span class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs">Firebase</span>
-              <span class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs">Tailwind</span>
+              <span class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs">Android</span>
+              <span class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs">Java</span>
+              <!-- <span class="bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs">Tailwind</span> -->
             </div>
           </div>
         </div>
